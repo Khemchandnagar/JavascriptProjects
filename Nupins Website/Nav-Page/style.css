@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-page {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(images/104_generated\ 1.png);
+    background-size: contain;
+    color: #FFFFFFE5;
+    height: 548px;
+    width: 1440px;
+    border-radius: 0px;
+    opacity: 20%;
+}
