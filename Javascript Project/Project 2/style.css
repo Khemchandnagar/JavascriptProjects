@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: aqua;
+}
+
+.container {
+    background-color: rgb(104, 104, 236);
+    width: 400px;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.container form {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(104, 104, 236);
+    font-size: large;
+    /* display: none; */
+}
+
+img {
+    width: 70px;
+    margin: 15px;
+}
+
+.qr-image {
+    width: 150px;
+    display: none;
+}
+
+.details {
+    display: none;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.details textarea {
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border-style: none;
+    width: calc(50% - 10px);
+    cursor: pointer;
+    columns: blue;
+    font-weight: 600;
+}
