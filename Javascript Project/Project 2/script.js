@@ -1,16 +1,21 @@
 const container = document.querySelector(".container"),
     form = container.querySelector("form"),
-    fileInput = form.querySelector("input")
+    fileInput = form.querySelector("input");
 
+let qrImage = document.querySelector(".qr-image");
+let content = document.querySelector(".content");
+let details = document.querySelector(".details");
+
+function afterScan() {
+    content.style.display = "none";
+    qrImage.style.display = "block";
+    details.style.display = "block";
+}
 
 function fetchRequest(formData) {
-    fetch("https://api.hubapi.com", {
+    fetch("https://pdf.co/how-to-use-qr-code-reader-api/barcode/read/from/url", {
         method: "POST",
         body: formData,
-        // headers: {
-        //     'X-RapidAPI-Host': 'qrcode.p.rapidapi.com',
-        //     'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
-        // }
     }).then(res => res.json()).then(result => {
         console.log(result);
     });

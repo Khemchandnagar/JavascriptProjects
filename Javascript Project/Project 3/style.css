@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 145, 0);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 600px;
+    background: white;
+    border-radius: 7px;
+    padding: 25px;
+}
+
+.wrapper {
+    border: 1px solid #bbb;
+    border-radius: 7px;
+}
+
+.text-input {
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+
+textarea {
+    height: 250px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    resize: none;
+}
+
+.from-text {
+    border-right: 1px solid #bbb;
+}
+
+.control,
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.control {
+    padding: 10px;
+}
+
+.icons i {
+    color: #9f9f9f;
+    cursor: pointer;
+    width: 40px;
+}
+
+.control .row select {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    margin: 0 20px;
+}
+
+.exchange {
+    color: #9f9f9f;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    background: blue;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}

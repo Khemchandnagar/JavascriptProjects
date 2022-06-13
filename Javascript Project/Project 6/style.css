@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(254, 134, 210);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background: white;
+    width: 500px;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.content h1 {
+    margin: 10px 0;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.content input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content button {
+    width: 100%;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 20px;
+    border: none;
+    background: rgb(254, 134, 210);
+    color: white;
+    margin: 10px 0;
+}
+
+.CheckerText {
+    text-align: center;
+}
