@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(IMG-20220614-WA0001.png);
+    background-size: cover;
+}
+
+.main {
+    margin-top: -20vh;
+    display: flex;
+}
+
+img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.name-input {
+    background: none;
+    width: 20vw;
+    height: 10vh;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 5px;
+    padding: 20px;
+    color: rgb(119, 228, 125);
+}
+
+.btn {
+    height: 10vh;
+}

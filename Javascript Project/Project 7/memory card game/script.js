@@ -1,9 +1,38 @@
-const cards = document.querySelectorAll(".card");
+let cardSize = 36;
+selectCards();
+const cards = document.querySelectorAll(".card"),
+    numberCard = document.querySelector(".listSpan"),
+    wrapper = document.querySelector(".wrapper");
+let h = 6;
+let w = 6;
+wrapper.style.width = (h) + "00px";
+wrapper.style.height = (w) + "00px";
+
 
 
 let matchedCard = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+
+// function sizeOfCard() {
+//     document.getElementsByClassName("card").style.width = "100px";
+// }
+// sizeOfCard();
+
+function selectCards() {
+    for (let i = 0; i < cardSize; i++) {
+        let temp = (i % 8) + 1;
+        document.querySelector(".cards").insertAdjacentHTML("beforeend", `<li class="card">
+                <div class="view front-view">
+                    <span class="material-icons">question_mark</span>
+                </div>
+                <div class="view back-view">
+                    <img src="images/img-${temp}.png" alt="card-image">
+                </div>
+            </li>`)
+    }
+}
+
 
 function flipCard(e) {
     let clickedCard = e.target;
@@ -24,7 +53,7 @@ function flipCard(e) {
 function matchCards(img1, img2) {
     if (img1 === img2) {
         matchedCard++;
-        if (matchedCard == 8) {
+        if (matchedCard == cardSize / 2) {
             setTimeout(() => {
                 return shuffleCards();
             }, 1000)
@@ -53,9 +82,16 @@ function shuffleCards() {
     matchedCard = 0;
     cardOne = cardTwo = "";
     disableDeck = false;
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+    let arr = [];
+    for (let i = 0; i < cardSize / 2; i++) {
+        let temp = i % 8 + 1;
+        arr.push(temp);
+        arr.push(temp);
 
+    }
+    // arr.sort();
+    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+    console.log(arr);
     cards.forEach((card, index) => {
         card.classList.remove("flip");
         let imgTag = card.querySelector("img");
@@ -65,7 +101,10 @@ function shuffleCards() {
 }
 
 shuffleCards();
+
 cards.forEach(card => {
-    card.classList.add("flip");
+    // card.classList.add("flip");
     card.addEventListener("click", flipCard);
-});
+    card.style.width = `calc(100% / ${w} - 10px)`;
+    card.style.height = `calc(100% / ${h} - 10px)`;
+})

@@ -13,8 +13,8 @@ body {
 }
 
 .wrapper {
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     background: white;
     border-radius: 10px;
     padding: 25px;
@@ -36,14 +36,15 @@ body {
 }
 
 .cards .card {
+    /* background: red; */
     list-style: none;
     user-select: none;
     cursor: pointer;
     position: relative;
     perspective: 800px;
     transform-style: preserve-3d;
-    height: calc(100% / 4 - 10px);
-    width: calc(100% / 4 - 10px);
+    /* height: calc(100% / 4 - 10px);
+    width: calc(100% / 5 - 10px); */
 }
 
 .card.shake {
