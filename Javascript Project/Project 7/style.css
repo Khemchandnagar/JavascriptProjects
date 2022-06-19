@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    /* position:relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 1150px;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.main {
+    display: flex;
+}
+
+img {
+    height: 100vh;
+    width: 100vw;
+}
+
+placeholder {
+    color: black;
+}
+
+input {
+    background: lavender;
+    width: 20vw;
+    height: 10vh;
+    color: black;
+    font-size: large;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding-left: 10px;
+}

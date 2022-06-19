@@ -1,0 +1,65 @@
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        /* padding: 30px 0; */
+    }
+    
+    .multiplayer-mode {
+        background: linear-gradient(45deg, #b95ce4, #4f29cd);
+        /* width: 400px; */
+        height: 500px;
+        position: relative;
+        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05), inset -5px -5px 5px rgba(225, 225, 225, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(225, 225, 225, 0.5);
+        border-radius: 15px;
+        margin: 30px;
+    }
+    
+    .players-data {
+        overflow: auto;
+        height: 80%;
+    }
+    
+    header,
+    .col {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2px;
+        cursor: pointer;
+    }
+    
+    header h2,
+    .col h2 {
+        width: 150px;
+        text-align: center;
+    }
+    
+    header {
+        color: aliceblue;
+        margin: 10px 0;
+        border-bottom: 1px solid black;
+    }
+    
+    .yourTurn {
+        background-color: red;
+        box-shadow: 0 0 5px 5px (green);
+        transform: scaleZ(1.2);
+    }

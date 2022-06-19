@@ -1,6 +1,6 @@
 const container = document.querySelector(".container"),
     form = container.querySelector("form"),
-    fileInput = form.querySelector("input");
+    fileInput = form.querySelector(".fileInput");
 
 let qrImage = document.querySelector(".qr-image");
 let content = document.querySelector(".content");
@@ -12,20 +12,19 @@ function afterScan() {
     details.style.display = "block";
 }
 
-function fetchRequest(formData) {
-    fetch("https://pdf.co/how-to-use-qr-code-reader-api/barcode/read/from/url", {
+function fetchRequest(file, formData) {
+    fetch("http://api.qrserver.com/v1/read-qr-code/", {
         method: "POST",
         body: formData,
-    }).then(res => res.json()).then(result => {
-        console.log(result);
-    });
+    }).then(res => console.log(res()));
 }
 
 fileInput.addEventListener("change", e => {
     let file = e.target.files;
     let formData = new FormData();
     formData.append("file", file);
-    fetchRequest(formData);
+    console.log(formData);
+    fetchRequest(file, formData);
 });
 
 form.addEventListener("click", () => fileInput.click());
